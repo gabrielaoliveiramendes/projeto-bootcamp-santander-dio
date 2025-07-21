@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tags HTML</title>
+</head>
+
+<body>
+    <header>
+        <h1>Tags HTML - Bootcamp DIO: Santander 2025 - Front-end</h1>
+    </header>
+
+    <main>
+        <nav>
+            <h2>Sumário</h2>
+            <ul>
+                <li><a href="#introducao">Introdução</a></li>
+                <li><a href="#formularios">Formulários</a></li>
+                <li><a href="#midias">Mídias</a></li>
+                <li><a href="#tabelas">Tabelas</a></li>
+            </ul>
+        </nav>
+
+
+        <section id="introducao">
+            <h2>Introdução</h2>
+            <p>Esta página apresenta um resumo das principais tags HTML aprendidas no bootcamp Santander 2025 - Front-end, oferecido pela plataforma DIO. Aqui você encontrará explicações sobre tags utilizadas em formulários, elementos para inserção de mídias e também as tags essenciais para a criação de tabelas.</p>
+        </section>
+        <section id="formularios">
+            <div>
+                <h2>Formulários</h2>
+                <h3>As principais tags utilizadas para a criação de formulários em HTML são:</h3>
+                <ul>
+                    <li>
+                        <strong>&lt;form&gt;</strong>: Define o início e o fim de um formulário. É o elemento principal que agrupa todos os campos e botões.
+                    </li>
+                    <li>
+                        <strong>&lt;input&gt;</strong>: Utilizada para criar campos de entrada de dados, como texto, senha, e-mail, número, entre outros. O tipo de entrada é definido pelo atributo <code>type</code>.
+                    </li>
+                    <li>
+                        <strong>&lt;label&gt;</strong>: Associa um texto descritivo a um campo do formulário, melhorando a acessibilidade.
+                    </li>
+                    <li>
+                        <strong>&lt;select&gt;</strong>: Cria uma lista suspensa de opções para o usuário escolher.
+                    </li>
+                    <li>
+                        <strong>&lt;option&gt;</strong>: Define cada uma das opções dentro de um <code>&lt;select&gt;</code>.
+                    </li>
+                    <li>
+                        <strong>&lt;textarea&gt;</strong>: Permite a inserção de textos longos em várias linhas.
+                    </li>
+                    <li>
+                        <strong>&lt;button&gt;</strong>: Cria botões para enviar ou redefinir os dados do formulário.
+                    </li>
+                    <li>
+                        <strong>&lt;input type="radio"&gt;</strong>: Permite a seleção de apenas uma opção entre várias disponíveis.
+                    </li>
+                    <li>
+                        <strong>&lt;input type="checkbox"&gt;</strong>: Permite a seleção de múltiplas opções independentes.
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h3>Exemplo de Formulário:</h3>
+                <pre><code>
+                &lt;form&gt;
+                    &lt;label for="nome"&gt;Nome:&lt;/label&gt;
+                    &lt;input type="text" id="nome" name="nome" required&gt;&lt;br&gt;&lt;br&gt;
+
+                    &lt;label for="email"&gt;E-mail:&lt;/label&gt;
+                    &lt;input type="email" id="email" name="email" required&gt;&lt;br&gt;&lt;br&gt;
+
+                    &lt;label for="senha"&gt;Senha:&lt;/label&gt;
+                    &lt;input type="password" id="senha" name="senha" required&gt;&lt;br&gt;&lt;br&gt;
+
+                    &lt;label for="genero"&gt;Gênero:&lt;/label&gt;
+                    &lt;select id="genero" name="genero"&gt;
+                        &lt;option value=""&gt;Selecione&lt;/option&gt;
+                        &lt;option value="feminino"&gt;Feminino&lt;/option&gt;
+                        &lt;option value="masculino"&gt;Masculino&lt;/option&gt;
+                        &lt;option value="outro"&gt;Outro&lt;/option&gt;
+                    &lt;/select&gt;&lt;br&gt;&lt;br&gt;
+
+                    &lt;label&gt;Interesses:&lt;/label&gt;&lt;br&gt;
+                    &lt;input type="checkbox" id="frontend" name="interesses" value="frontend"&gt;
+                    &lt;label for="frontend"&gt;Front-end&lt;/label&gt;
+                    &lt;input type="checkbox" id="backend" name="interesses" value="backend"&gt;
+                    &lt;label for="backend"&gt;Back-end&lt;/label&gt;
+                    &lt;input type="checkbox" id="fullstack" name="interesses" value="fullstack"&gt;
+                    &lt;label for="fullstack"&gt;Full Stack&lt;/label&gt;&lt;br&gt;&lt;br&gt;
+
+                    &lt;label&gt;Tipo de usuário:&lt;/label&gt;&lt;br&gt;
+                    &lt;input type="radio" id="aluno" name="tipo" value="aluno" required&gt;
+                    &lt;label for="aluno"&gt;Aluno&lt;/label&gt;
+                    &lt;input type="radio" id="mentor" name="tipo" value="mentor"&gt;
+                    &lt;label for="mentor"&gt;Mentor&lt;/label&gt;&lt;br&gt;&lt;br&gt;
+
+                    &lt;label for="mensagem"&gt;Mensagem:&lt;/label&gt;&lt;br&gt;
+                    &lt;textarea id="mensagem" name="mensagem" rows="4" cols="40"&gt;&lt;/textarea&gt;&lt;br&gt;&lt;br&gt;
+
+                    &lt;button type="submit"&gt;Enviar&lt;/button&gt;
+                    &lt;button type="reset"&gt;Limpar&lt;/button&gt;
+                &lt;/form&gt;
+                </code></pre>
+            </div>
+        </section>
+        <section id="midias">
+            <div>
+                <h2>Mídias</h2>
+                <p>As tags HTML para mídias permitem incorporar imagens, sons, vídeos e conteúdos externos em páginas web. A seguir, estão as principais tags utilizadas:</p>
+                <ul>
+                    <li>
+                        <strong>&lt;img&gt;</strong>: Utilizada para exibir imagens. O atributo <code>src</code> define o caminho do arquivo, enquanto <code>alt</code> fornece uma descrição alternativa. Os formatos mais comuns são <code>.jpg</code>, <code>.png</code>, <code>.gif</code> e <code>.svg</code>.
+                    </li>
+                    <li>
+                        <strong>&lt;audio&gt;</strong>: Permite inserir arquivos de áudio. Os principais atributos são <code>controls</code> (exibe controles de reprodução), <code>autoplay</code> (inicia automaticamente), <code>loop</code> (reproduz em loop) e <code>muted</code> (inicia sem som). Os formatos suportados incluem <code>.mp3</code>, <code>.wav</code> e <code>.ogg</code>.
+                    </li>
+                    <li>
+                        <strong>&lt;video&gt;</strong>: Usada para incorporar vídeos. Possui atributos como <code>controls</code>, <code>autoplay</code>, <code>loop</code>, <code>muted</code> e <code>poster</code> (imagem de capa). Os formatos mais comuns são <code>.mp4</code>, <code>.webm</code> e <code>.ogg</code>.
+                    </li>
+                    <li>
+                        <strong>&lt;iframe&gt;</strong>: Permite incorporar conteúdos externos, como vídeos do YouTube, mapas ou outras páginas web, através do atributo <code>src</code>.
+                    </li>
+                    <li>
+                        <strong>&lt;source&gt;</strong>: Usada dentro das tags <code>&lt;audio&gt;</code> e <code>&lt;video&gt;</code> para especificar múltiplos arquivos de diferentes formatos, garantindo compatibilidade entre navegadores. O navegador escolhe o primeiro formato suportado.
+                    </li>
+                    <li>
+                        <strong>&lt;track&gt;</strong>: Utilizada dentro da tag <code>&lt;video&gt;</code> para adicionar faixas de texto, como legendas, descrições ou capítulos, melhorando a acessibilidade.
+                    </li>
+                </ul>
+                <p>O encadeamento de recursos ocorre quando múltiplos arquivos são especificados usando a tag <code>&lt;source&gt;</code> dentro de <code>&lt;audio&gt;</code> ou <code>&lt;video&gt;</code>. Dessa forma, o navegador seleciona automaticamente o formato mais adequado, garantindo que o conteúdo seja exibido corretamente para todos os usuários.
+                </p>
+            </div>
+            <div>
+                <h3>Exemplos de uso das tags de mídia:</h3>
+                <h4>&lt;img&gt;</h4>
+                <pre><code>&lt;img src="https://via.placeholder.com/200x100.png?text=Exemplo+Imagem" alt="Exemplo de imagem" width="200" height="100"&gt;</code></pre>
+
+                <h4>&lt;audio&gt;</h4>
+                <pre><code>&lt;audio controls&gt;
+                &lt;source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg"&gt;
+                &lt;source src="https://www.w3schools.com/html/horse.ogg" type="audio/ogg"&gt;
+                Seu navegador não suporta o elemento de áudio.
+                &lt;/audio&gt;</code></pre>
+
+                <h4>&lt;video&gt;</h4>
+                <pre><code>&lt;video width="320" height="180" controls poster="https://via.placeholder.com/320x180.png?text=Poster+Video"&gt;
+                    &lt;source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4"&gt;
+                    &lt;source src="https://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg"&gt;
+                    Seu navegador não suporta o elemento de vídeo.
+                    &lt;track src="legenda.vtt" kind="subtitles" srclang="pt" label="Português"&gt;
+                    &lt;/video&gt;</code></pre>
+
+                <h4>&lt;iframe&gt;</h4>
+                <pre><code>&lt;iframe width="320" height="180" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Exemplo de vídeo do YouTube" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</code></pre>
+            </div>
+        </section>
+        <section id="tabelas">
+            <div>
+                <h2>Tabelas</h2>
+                <p>As tabelas em HTML são criadas para organizar dados em linhas e colunas, facilitando a visualização de informações estruturadas. As principais tags utilizadas para a construção de tabelas são:</p>
+                <ul>
+                    <li>
+                        <strong>&lt;table&gt;</strong>: Define o início e o fim de uma tabela.
+                    </li>
+                    <li>
+                        <strong>&lt;tr&gt;</strong>: Representa uma linha dentro da tabela.
+                    </li>
+                    <li>
+                        <strong>&lt;td&gt;</strong>: Define uma célula de dados em uma linha.
+                    </li>
+                    <li>
+                        <strong>&lt;th&gt;</strong>: Cria uma célula de cabeçalho, geralmente utilizada para títulos das colunas ou linhas.
+                    </li>
+                    <li>
+                        <strong>&lt;thead&gt;</strong>: Agrupa o cabeçalho da tabela.
+                    </li>
+                    <li>
+                        <strong>&lt;tbody&gt;</strong>: Agrupa o corpo principal da tabela.
+                    </li>
+                    <li>
+                        <strong>&lt;tfoot&gt;</strong>: Agrupa o rodapé da tabela.
+                    </li>
+                    <li>
+                        <strong>&lt;caption&gt;</strong>: Adiciona um título descritivo à tabela.
+                    </li>
+                </ul>
+                <p>Os principais atributos das tags de tabela incluem:</p>
+                <ul>
+                    <li>
+                        <strong>colspan</strong>: Permite que uma célula ocupe várias colunas.
+                    </li>
+                    <li>
+                        <strong>rowspan</strong>: Permite que uma célula ocupe várias linhas.
+                    </li>
+                    <li>
+                        <strong>scope</strong>: Usado em <code>&lt;th&gt;</code> para indicar se o cabeçalho se refere a uma linha ou coluna (<code>row</code> ou <code>col</code>).
+                    </li>
+                </ul>
+                <p>Essas tags e atributos tornam possível criar tabelas acessíveis, organizadas e personalizadas conforme a necessidade do conteúdo apresentado.</p>
+            </div>
+            <div>
+                <h3>Exemplo de tabela:</h3>
+                <pre><code>&lt;table&gt;
+                    &lt;caption&gt;Exemplo de Tabela de Participantes&lt;/caption&gt;
+                    &lt;thead&gt;
+                        &lt;tr&gt;
+                            &lt;th scope="col"&gt;Nome&lt;/th&gt;
+                            &lt;th scope="col"&gt;Função&lt;/th&gt;
+                            &lt;th scope="col"&gt;Área&lt;/th&gt;
+                        &lt;/tr&gt;
+                    &lt;/thead&gt;
+                    &lt;tbody&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt;Ana&lt;/td&gt;
+                            &lt;td&gt;Mentora&lt;/td&gt;
+                            &lt;td rowspan="2"&gt;Front-end&lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt;Carlos&lt;/td&gt;
+                            &lt;td&gt;Aluno&lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt;Beatriz&lt;/td&gt;
+                            &lt;td colspan="2"&gt;Full Stack&lt;/td&gt;
+                        &lt;/tr&gt;
+                    &lt;/tbody&gt;
+                    &lt;tfoot&gt;
+                        &lt;tr&gt;
+                            &lt;td colspan="3"&gt;Total de participantes: 3&lt;/td&gt;
+                        &lt;/tr&gt;
+                    &lt;/tfoot&gt;
+                &lt;/table&gt;
+                </code></pre>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
